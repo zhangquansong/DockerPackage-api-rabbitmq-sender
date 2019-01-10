@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: api-rabbitmq-sender
+  rabbitmq:
+    appid: 9A064E7A180DD4790F827F546F699BB3
+    host: 10.0.131.236
+    port: 5672
+    username: zqs
+    password: 123456
+    publisher-confirms: true #    支持发布确认
+    publisher-returns: true  #    支持发布返回
+    virtual-host: /
+  rabbit:
+    queue:
+      name: clt-queue
+    topic:
+      exchange: amq.topic
+      routingkey: clt-routingkey
